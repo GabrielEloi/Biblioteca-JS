@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Biblioteca/Components/style.css">
+</head>
+<body>
+    <main>
+        <H1>Esse é um teste da minha biblioteca</H1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum placeat facilis optio enim corporis, atque velit culpa tempore sapiente ea nobis blanditiis exercitationem quam expedita maxime temporibus hic minima repudiandae.</p>
+        <p>Quero meu botão aqui ao lado --> <span id="botao"></span> </p>
+        <p>Quero meu select aqui ao lado --> <span id="select"></span></p>
+        <p>Quero meu input aqui ao aldo --> <span id="input"></span></p>
+    </main>
+
+    <section>
+        <button onclick="carregarDados('https://jsonplaceholder.typicode.com/users/1')">Carregar Dados</button>
+        <div id="resultado"></div>
+
+        <div id="gpm-loading">
+            <div class="spinner"></div>
+        </div>
+    </section>
+</body>
+<script src="biblioteca.js"></script>
+<script>
+
+    // Button exemplo:
+    let container = document.getElementById("botao");
+    let btn = createButton("Meu Botão", "button-filled");
+    container.appendChild(btn);
+
+    // Select Exemplo:
+    let containerSelect = document.getElementById("select");
+    let select = createSelect(
+    "categoria",
+    [
+        { value: "eletrônicos", text: "Eletrônicos" },
+        { value: "roupas", text: "Roupas" },
+        { value: "livros", text: "Livros" }
+    ], false);
+
+    containerSelect.appendChild(select);
+
+    //Input Exemplo:
+    let containerInput = document.getElementById("input");
+    let input = inputCreate("Email", "email", "seu@email.com", "campo-input", "email", true);
+    containerInput.appendChild(input);
+
+    // Carregar dados da API ao abrir a página
+    carregarDados("https://jsonplaceholder.typicode.com/users/1");
+
+</script>
+</html>
