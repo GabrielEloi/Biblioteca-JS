@@ -1,0 +1,403 @@
+/* ===== VARIÁVEIS DE COR ===== */
+:root {
+    --corprimaria: #000524;
+    --corsecundaria: #101f78;
+    --corterciaria: #020f59;
+    --corquarta: #101f78;
+    --coroptional: rgb(24, 39, 55);
+    --cortexto: #555;
+    
+    /* Cores para Toast */
+    --toast-success: #4CAF50;
+    --toast-error: #f44336;
+    --toast-warning: #ff9800;
+    --toast-info: #2196F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* ===== BOTÕES ===== */
+
+/* Botão Preenchido */
+.button-filled {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--corprimaria);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-filled:hover {
+    background-color: #0a0d3e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.button-filled:active {
+    background-color: #050218;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.button-filled:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Botão Vazio */
+.button-empty {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 2px solid var(--corprimaria);
+    background-color: white;
+    color: var(--corprimaria);
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-empty:hover {
+    background-color: var(--corprimaria);
+    color: white;
+    border-color: var(--corterciaria);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.button-empty:active {
+    background-color: var(--corterciaria);
+    color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.button-empty:disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Botão com Mudança de Borda */
+.button-borderchange {
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: 2px solid #666;
+    background-color: white;
+    color: #666;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button-borderchange:hover {
+    border-color: var(--corprimaria);
+    color: var(--corprimaria);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.button-borderchange:active {
+    border-color: #004455;
+    color: #004455;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.button-borderchange:disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ===== INPUTS ===== */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-container label {
+    font-weight: 600;
+    color: var(--cortexto);
+    font-size: 14px;
+}
+
+.input-container input {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: var(--corprimaria);
+    box-shadow: 0 0 0 3px rgba(0, 5, 36, 0.1);
+}
+
+.input-container input:hover {
+    border-color: #bbb;
+}
+
+.input-container input::placeholder {
+    color: #999;
+}
+
+.input-container input[type="file"] {
+    padding: 8px;
+}
+
+/* ===== SELECT ===== */
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.select-container label {
+    font-weight: 600;
+    color: var(--cortexto);
+    font-size: 14px;
+}
+
+.select-container select {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000524' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 32px;
+}
+
+.select-container select:focus {
+    outline: none;
+    border-color: var(--corprimaria);
+    box-shadow: 0 0 0 3px rgba(0, 5, 36, 0.1);
+}
+
+.select-container select:hover {
+    border-color: #bbb;
+}
+
+.select-container select option {
+    padding: 8px;
+}
+
+.select-box{
+    padding: 10px;
+    background-color: white;
+}
+
+/* ===== TOAST NOTIFICATION SYSTEM ===== */
+
+#gpm-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: none;
+}
+
+.gpm-toast {
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
+    animation: slideIn 0.3s ease-out forwards;
+    color: white;
+    font-weight: 500;
+    pointer-events: auto;
+}
+
+.gpm-toast.show {
+    animation: slideOut 0.3s ease-in forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Toast Types */
+.gpm-toast.success {
+    background-color: var(--toast-success);
+}
+
+.gpm-toast.error {
+    background-color: var(--toast-error);
+}
+
+.gpm-toast.warning {
+    background-color: var(--toast-warning);
+    color: #333;
+}
+
+.gpm-toast.info {
+    background-color: var(--toast-info);
+}
+
+/* ===== LOADING SYSTEM ===== */
+
+#gpm-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ===== INLINE LOADING SYSTEM ===== */
+
+.inline-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: inherit;
+}
+
+.inline-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Loading text no overlay global */
+#gpm-loading .loading-text {
+    color: white;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 768px) {
+    #gpm-toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .gpm-toast {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .input-container,
+    .select-container {
+        max-width: 100%;
+    }
+
+    .button-filled,
+    .button-empty,
+    .button-borderchange {
+        width: 100%;
+    }
+}
+
+.toggleStyle{
+    background-color: #666;
+    border: none;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.356);
+    padding:5px;
+    width: 50px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    justify-self: row;
+
+}
+
+.toggleStyle:hover{
+    background-color: #444242;
+
+}
