@@ -1,3 +1,6 @@
+Link Notion: https://www.notion.so/Biblioteca-JS-35f1d6f6eb7980deb840ee358e4f86be
+
+
 # Biblioteca JS
 
 ## Modo de uso das funções de componentes:
